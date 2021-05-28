@@ -5,4 +5,4 @@
 
 英雄传说3 元祖版：https://soukinokatu.github.io/ED-walkthrough/ED3-OLD/ED3OLD.html
 
-英雄传说3 PSP版：https://soukinokatu.github.io/ED-walkthrough/ED3-OLD/ED3PSP.html
+英雄传说3 PSP版：https://soukinokatu.github.io/ED-walkthrough/ED3-PSP/ED3PSP.html
