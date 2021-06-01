@@ -40,7 +40,7 @@
 </h2>
 
 <p>
-	因游戏<strong>使用的是mci函数调用midi音乐，该函数在Windows XP以上系统存在兼容性问题</strong>，如果用midi格式的音乐，在游戏切换音乐时候会出现游戏短暂假死的现象。
+	因Windows版《英雄传说》系列<strong>使用的是mci函数调用midi音乐，该函数在Windows XP以上系统存在兼容性问题</strong>，如果用midi格式的音乐，在游戏切换音乐时候会出现游戏短暂假死的现象。
 </p>	
 <p>
 	需要用自制软件MciHook（<a href="https://soukinokatu.github.io/ED-walkthrough/mcihook-safe.rar" target="_blank">下载地址</a>，软件由古怪制作）在游戏时于后台启动来解决midi音乐的问题</span> 
@@ -85,4 +85,43 @@
 </p>
 <p>
 	虽然DOS版也支持midi音源，但是驱动只支持<strong>Roland midi设备</strong>，大部分不玩音乐的玩家一般都不会去考虑如此昂贵的设备，而且目前的DOSBOX环境很难支持Roland Midi（需要用直通驱动配置），所以DOS版本的玩家大多数默认只能使用<span>WAV音源</span>。
+</p>
+<h2>
+	五、关于DOS版所适用的DOS环境
+</h2>
+<p>
+	DOS版游戏目前最佳的适用平台是DOSBOX，但游戏在原版DOSBOX下有很严重的声音问题，由于天堂鸟公司的游戏的wav音效和CD音轨一律使用<strong>Sound Blaster声卡输出</strong>，在DOSBOX环境下会出现严重干扰，具体表现在BGM间歇性出现爆音沙哑，音效不断产生回音等现象。
+</p>
+<p>
+	目前DOSBOX的改版<strong>DOSBOX-X</strong>（<a href="https://dosbox-x.com/" target="_blank">下载地址</a>）能基本解决这一问题，但是由于二者同时占用声卡，并且需要频繁读取CD音轨，游戏偶尔仍会有卡顿现象。
+</p>
+<h2>
+	六、PC98版所适用的环境。
+</h2>
+<p>
+	由于PC98实体机目前较难找到，除了EGG版之外，大多数玩家只能在模拟器上适用并游玩。
+</p>
+<p>
+	PC98的模拟环境较多，但大多数为日本制作，包括<strong>Anex86</strong>（<a href="https://www.emulation64.com/files/info/680/anex86.html/" target="_blank">下载页</a>），<strong>98-NEXT</strong>（<a href="http://akiyuki.boy.jp/old/t98next/" target="_blank">官方主页</a>），<strong>Neko </strong><strong>P</strong><strong>r</strong><strong>o</strong><strong>ject </strong><strong>I</strong><strong>I</strong>（<a href="http://www.retropc.net/yui/np2.html" target="_blank">官方主页</a>）及其改版（<a href="http://nenecchi.kirara.st/#PC-98" target="_blank">改版介绍页</a>），以及正在处于测试期的DOSBOX-X。
+</p>
+<p>
+	前三种模拟环境都已十分古老且作者早已停止更新，大多数模拟器仅能模拟286环境，而NP改版也有比较严重的效能问题，不过各个模拟环境只需要挂载相应的硬盘镜像及软盘镜像即可直接安装运行游戏。
+</p>
+<p>
+	目前运行PC98版《英雄传说》最佳平台是<strong>DOSBOX-X，且大部分无需检测软盘的游戏都可以直接在DOSBOX-X的pc98环境下运行，无需安装PC98用DOS，但是需要一定程度的配置，包括启动PC98模式及挂载PC98镜像。</strong>
+</p>
+<p>
+	<br />
+</p>
+<p>
+	PC98环境无法直接挂载宿主机的硬盘文件夹，而是必须使用<strong>hdi格式的PC98硬盘镜像</strong>，部分游戏的资源内会有已配置好的镜像，直接挂载即可。
+</p>
+<p>
+	另外，对于《英雄传说3》来说，软盘版必须设定DOSBOX引导启动挂载的硬盘镜像（指令为：<strong>boot 盘符</strong>，可添加至cofing.sys文件的autoexec中自动运行），并在PC-98 DOS环境下运行游戏，才可识别并验证软盘。
+</p>
+<p>
+	而CD版游戏则相反，需要在DOSBOX-X的DOS环境下挂载CD，并直接于该环境下运行游戏，否则无法加载CD驱动。
+</p>
+<p>
+	关于DOSBOX-X如何启动PC98模式及挂载硬盘的教程参见DOSBOX-X的wiki：<a href="https://dosbox-x.com/wiki/Guide%3APC%E2%80%9098-emulation-in-DOSBox%E2%80%90X" target="_blank">https://dosbox-x.com/wiki/Guide%3APC%E2%80%9098-emulation-in-DOSBox%E2%80%90X</a>（英文）。
 </p>
