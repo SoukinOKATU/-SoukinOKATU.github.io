@@ -56,7 +56,10 @@
 	这在当时无可厚非的保障了一定量的游戏正版的销售，但在之后游戏原盘越来越珍贵的问题下，这个反盗版反而成为了希望保护原版光盘的玩家的阻碍。
 </p>
 <p>
-	首先，游戏的DISC2不能用普通方法提取，必须用Alcohol 120%并选择SecuROM模式才可以提取，否则仍然有可能会被识别为非原盘，而绕过SecuROM验证的方法目前有以下几种：
+	首先，游戏的DISC2不能用普通方法提取，必须用Alcohol 120%并选择SecuROM模式才可以提取，否则仍然有可能会被识别为非原盘。
+</p>
+<p>
+	而反盗版系统的解决方案目前有以下几种：
 </p>
 <p>
 	<ol>
@@ -66,12 +69,24 @@
 		<li>
 			使用SecuROM脱壳软件（制作者Tingsister），选择游戏启动项并勾选“绕过自检”，注入注册表后可以免去光盘验证（<a href="https://soukinokatu.github.io/ED-walkthrough/ED3-OLD/securomcracker.zip" target="_blank">下载地址</a>，该软件需VC2010运行库支持），缺点是每次必须运行此程序进行脱壳。
 		</li>
+		<li>
+		如果不想与加密斗智斗勇的话，可以直接去方块游戏购买数字版，缺点是游戏启动时必须从方块游戏客户端启动，而且客户端仅支持XP以上的64位系统，如果需要复制至XP系统中并脱离客户端，需要把原版启动文件（<a href="https://soukinokatu.github.io/ED-walkthrough/ED3-OLD/ED3_WIN.EXE" target="_blank">下载地址</a>）覆盖客户端版启动文件。
+		</li>
 	</ol>
 	
-			如果不想与加密斗智斗勇的话，可以直接去方块游戏购买数字版，缺点是方块游戏客户端仅支持64位系统。
+			
 </p>
 <h2>
-	四、《白发魔女》PC98版与DOS版有何区别
+	三、关于Windows版在Windows 7上的运行问题
+</h2>
+<p>
+      目前用户常见的Windows 7 旗舰版一般都是打开了<strong>毛玻璃和Aero</strong>效果，此效果会导致不少Directdraw绘制的老游戏出现花版现象，需要利用花版修复程序<strong>DirectDraw Compatibility Tool</strong>（a href="https://soukinokatu.github.io/ED-walkthrough/DirectDraw_Compatibility_Tool.zip" target="_blank">下载地址</a>）选择启动文件导入注册表来解决。
+</p>
+<p>
+      另外，不少Windows 7缺少视频解码器，导致开场动画和logo无法播放，需要藉由安装Win7codec之类的解码器合集来解决。
+</p>
+<h2>
+	五、《白发魔女》PC98版与DOS版有何区别
 </h2>
 <p>
 	<span>PC98版（即PC9801系列机型用DOS版）与DOS版（即PC/AT互换机用DOS版）</span>在故事剧情和系统上没有什么太大区别，<span>只是因为日本在1996年之前占据市场主导地位的计算机为能够处理日文的NEC-PC9801系列计算机，所以游戏在日本一般都会优先发售PC-98 DOS版，PC98版的运行环境依然是MS-DOS，只不过是微软特制的PC98用DOS。</span> 
@@ -80,16 +95,16 @@
 只有极其少量日版游戏在1994年后会发行PC/AT互换机用DOS/V（日文DOS系统）版，不过《英雄传说3》并没有发售DOS/V版。
 </p>
 <p>
-	而一般的PC/AT<span>-DOS</span>（即国际通用的IBM PC）版的发布只是为了在日本以外的计算机上发行，因此只有韩文版和繁体中文版为PC/AT互换机用DOS版，且并不支持日文系统。
+	而一般的PC/AT<span>-DOS</span>（即国际通用的IBM PC）版的发布只是为了在日本以外的计算机上发行，因此只有韩文版和繁体中文版为PC/AT互换机用DOS版，并不专门需要DOS/V系统。
 </p>
 <p>
-	DOS版唯一的差别就在于Midi音源的格式：PC98版只能使用机载的<strong>FM音源</strong>，而DOS版默认使用的是<strong>WAV音源+CD音轨</strong>，而DOS时代的WAV音源的音质十分一般，同时这也是DOS版在DOSBOX中经常声音回音爆音的原因。
+	DOS版唯一的差别就在于Midi音源的格式：PC98版只能使用机载的<strong>FM等Midi音源</strong>（游戏仅有几M大小，没有任何WAVE音乐），而DOS版默认使用的是<strong>WAV音源+CD音轨</strong>（整张光盘的容量几乎都是CD音乐），而DOS时代的WAV音源的音质十分一般，同时这也是DOS版在DOSBOX中经常声音回音爆音的原因。
 </p>
 <p>
-	虽然DOS版也支持midi音源，但是驱动只支持<strong>Roland midi设备</strong>，大部分不玩音乐的玩家一般都不会去考虑如此昂贵的设备，而且目前的DOSBOX环境很难支持Roland Midi（需要用直通驱动配置），所以DOS版本的玩家大多数默认只能使用<span>WAV音源</span>。
+	虽然DOS版也支持midi音源，但是驱动只支持<strong>Roland MT-32</strong>而无法直接使用软波表（虽然有模拟MT-32软波表，但是配置较复杂），大部分不玩音乐的玩家一般都不会去考虑如此昂贵的设备，所以DOS版本的玩家大多数默认只能使用<span>WAV音源</span>。
 </p>
 <h2>
-	五、关于DOS版所适用的DOS环境
+	、关于DOS版所适用的DOS环境
 </h2>
 <p>
 	DOS版游戏目前最佳的适用平台是DOSBOX，但游戏在原版DOSBOX下有很严重的声音问题，由于天堂鸟公司的游戏的wav音效和CD音轨一律使用<strong>Sound Blaster声卡输出</strong>，在DOSBOX环境下会出现严重干扰，具体表现在BGM间歇性出现爆音沙哑，音效不断产生回音等现象。
@@ -98,7 +113,7 @@
 	目前DOSBOX的改版<strong>DOSBOX-X</strong>（<a href="https://dosbox-x.com/" target="_blank">下载地址</a>）能基本解决这一问题，但是由于二者同时占用声卡，并且需要频繁读取CD音轨，游戏偶尔仍会有卡顿现象。
 </p>
 <h2>
-	六、PC98版所适用的环境。
+        七、PC98版所适用的环境。
 </h2>
 <p>
 	由于PC98实体机目前较难找到，除了EGG版之外，大多数玩家只能在模拟器上适用并游玩。
