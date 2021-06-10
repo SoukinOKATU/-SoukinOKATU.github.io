@@ -159,10 +159,13 @@
 	PC98环境无法直接挂载宿主机的硬盘文件夹，而是必须使用<strong>hdi格式的PC98硬盘镜像</strong>，部分游戏的资源内会有已配置好的镜像，直接挂载即可。
 </p>
 <p>
-	另外，对于《英雄传说3》来说，软盘版必须设定DOSBOX引导启动挂载的硬盘镜像，指令为：<strong>boot [盘符]</strong>（不含[]），可添加至cofing.sys文件的autoexec中自动运行，必须在hdi内部自带的PC-98 DOS环境下运行游戏，才可识别并验证软盘，如果hdi只是个空软盘镜像还要自行安装PC98用DOS。
+	另外，对于《英雄传说3》来说，软盘版在DOSBOX-X的自带DOS环境下是无法识别软盘的，必须安装并引导PC98专用DOS：
 </p>
 <p>
-	而CD版游戏则相反，需要在DOSBOX-X的DOS环境下挂载CD，并直接于该环境下运行游戏，否则无法加载CD驱动。
+首先挂载预装PC98-DOS和游戏的hdi硬盘镜像（大部分预装好游戏的镜像都已配备好自动启动指令），或挂载空hdi硬盘镜像后再用软盘安装镜像安装PC98-DOS和游戏，之后设定启动时从挂载的硬盘启动，（指令为：<strong>boot [盘符]</strong>（不含[]），可添加至cofing.sys文件的autoexec中自动运行），通过在hdi内部自带的PC-98 DOS环境下运行游戏，才可识别并验证软盘。
+</p>
+<p>
+	而CD版游戏则相反，需要在DOSBOX-X自己的DOS环境下挂载CD，并直接于该环境下运行游戏，否则无法加载CD驱动而无法识别CD。
 </p>
 <p>
 	关于DOSBOX-X如何启动PC98模式及挂载硬盘的教程参见DOSBOX-X的wiki：<a href="https://dosbox-x.com/wiki/Guide%3APC%E2%80%9098-emulation-in-DOSBox%E2%80%90X" target="_blank">https://dosbox-x.com/wiki/Guide%3APC%E2%80%9098-emulation-in-DOSBox%E2%80%90X</a>（英文）。
