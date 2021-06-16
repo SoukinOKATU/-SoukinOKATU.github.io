@@ -16,5 +16,31 @@
 游戏的固定存档必须在城镇使用<span style="color:#E53333;">帐篷</span>才可存档（<strong>PS版改为了自由存档</strong>），其余的时候只能使用读取后就会删除的中断存档，如果此时Game Over只能回到固定存档的地方，之后的进度都会消失，因此会对游戏造成一定的麻烦。
 </p>
 <p>
-但是中断存档实际上也是在SAVE文件夹内生成<strong>ED4_S99_.DAT</strong>文件，而固定存档栏位的文件一共可以生成40个（ED4_S0001至ED4_S040）通过将其更名为其他固定存档栏位的文件名编号来达到将中断存档作为固定存档使用的目的。
+但是中断存档实际上也是在SAVE文件夹内生成<strong>ED4_S99_.DAT</strong>文件，而固定存档栏位的文件一共可以生成47个（ED4_S0001至ED4_S047）通过将其更名为其他固定存档栏位的文件名编号来达到将中断存档作为固定存档使用的目的。
+</p>
+<p>
+	目前大多数备份的方法是占用固定存档最后一页（ED4_S040至ED4_S047），将中断存档复制成为040号存档，然后将041-047的每个存档复制下移一位，从而达到保留7个中断存档的目的。
+</p>
+<p>
+	代码：
+</p>
+<p>
+	<br />
+</p>
+<pre class="prettyprint lang-bsh">copy save\ed4_s046.dat save\ed4_s047.dat &gt; nul
+copy save\ed4_s045.dat save\ed4_s046.dat &gt; nul
+copy save\ed4_s044.dat save\ed4_s045.dat &gt; nul
+copy save\ed4_s043.dat save\ed4_s044.dat &gt; nul
+copy save\ed4_s042.dat save\ed4_s043.dat &gt; nul
+copy save\ed4_s041.dat save\ed4_s042.dat &gt; nul
+copy save\ed4_s040.dat save\ed4_s041.dat &gt; nul
+copy save\ed4_s99_.dat save\ed4_s040.dat &gt; nul</pre>
+<p>
+	DOSBOX模拟的DOS/PC98版中，此代码可以放入DOSBOX的.conf文件的“autoexec”配置下自动执行，也可以制作成为.bat文件，放入游戏安装文件夹下，关闭游戏后执行即可。
+</p>
+<p>
+	如果是PC98或DOS实机，则需要自己编辑制作.bat文件或每次游戏结束后输入执行一遍。&nbsp;
+</p>
+<p>
+	在备份后，如遇游戏Game Over，那么最后一页的所有存档即为之前保留的中断存档，这种方法的唯一缺点是占用最后一页存档位置。
 </p>
